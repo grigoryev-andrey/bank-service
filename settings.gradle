@@ -1,0 +1,5 @@
+rootProject.name = 'bank-service'
+include 'core'
+include 'presentation'
+include 'data-access'
+
