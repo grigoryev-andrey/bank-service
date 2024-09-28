@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group = 'itmo'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+javadoc {
+    exclude '**/ClientDto.java'
+}
+
+dependencies {
+    implementation project(':core')
+    implementation project('data-access')
+    implementation project(':presentation')
+
+    implementation 'info.picocli:picocli:4.7.5'
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
